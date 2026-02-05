@@ -1,7 +1,0 @@
-{
-  "name": "Copy of Friday Retreats",
-  "description": "A luxury travel booking experience for curated exotic retreats, featuring personalized concierge services and high-end aesthetics.",
-  "requestFramePermissions": [
-    "geolocation"
-  ]
-}

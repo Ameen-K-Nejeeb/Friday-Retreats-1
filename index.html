@@ -1,430 +1,131 @@
-
 <!DOCTYPE html>
-<html class="light scroll-smooth" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Friday Retreats | Luxury Reimagined</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#800000", // Deep Maroon
-                        "accent": "#C5A059",  // Muted Gold
-                        "bg-linen": "#FDFBF7",
-                        "bg-onyx": "#121212"
-                    },
-                    fontFamily: {
-                        "display": ["'Noto Serif'", "serif"],
-                        "sans": ["'Noto Sans'", "sans-serif"]
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        
-        /* Custom Luxury Glassmorphism */
-        .glass { 
-            background: rgba(255, 255, 255, 0.7); 
-            backdrop-filter: blur(12px); 
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .dark .glass { 
-            background: rgba(18, 18, 18, 0.8); 
-            backdrop-filter: blur(12px); 
-        }
-
-        /* Smooth reveal animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hide scrollbars but keep functionality */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday Retreats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-bg-linen dark:bg-bg-onyx font-sans text-stone-900 dark:text-stone-100 transition-colors duration-500 overflow-x-hidden">
+<body>
 
-    <!-- Navigation Header -->
-    <nav class="fixed top-0 w-full z-[100] glass border-b border-stone-200 dark:border-stone-800 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary dark:text-accent text-3xl">diamond</span>
-            <h1 class="font-display text-xl font-bold tracking-tight">FRIDAY RETREATS</h1>
-        </div>
-        <div class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400">
-            <a href="#destinations" class="hover:text-primary transition-colors">Destinations</a>
-            <a href="#philosophy" class="hover:text-primary transition-colors">Philosophy</a>
-            <a href="#membership" class="hover:text-primary transition-colors">Membership</a>
-            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-        </div>
-        <div class="flex items-center gap-4">
-            <button id="themeToggle" class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-colors">
-                <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
-            </button>
-            <button class="bg-primary text-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-stone-800 transition-all shadow-lg hover:shadow-primary/20">
-                Join Now
-            </button>
-        </div>
+    <nav class="navbar">
+        
+        <div class="logo"><div><img src="static/logo-round.png" alt="" style="height: 3rem;"></div>Friday Retreats</div>
+        <div class="user-icon"><i class="far fa-user-circle"></i>
+        <div class="menu-icon"><i class="fas fa-bars"></i></div></div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img 
-                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2000" 
-                class="w-full h-full object-cover opacity-80 dark:opacity-40 transition-opacity duration-1000"
-                alt="Luxury Landscape"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-bg-linen/20 to-bg-linen dark:to-bg-onyx"></div>
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Your Friday<br>Starts Here</h1>
+            <p>Experience exotic luxury retreats tailored for your ultimate escape.</p>
+            <button class="btn-primary">Book Your Escape</button>
+        </div>
+    </header>
+
+    <section class="section top-deals">
+        <div class="section-header">
+            <h2>Top Deals</h2>
+            <p>Curated luxury at exceptional value</p>
         </div>
         
-        <div class="relative z-10 text-center px-4 max-w-5xl">
-            <h2 class="font-display text-6xl md:text-9xl font-black mb-8 leading-[0.9] tracking-tighter opacity-0 translate-y-10 animate-[fadeUp_1s_ease-out_forwards]">
-                Escapism, <br/><span class="italic font-normal text-primary dark:text-accent">Perfected.</span>
-            </h2>
-            <p class="text-lg md:text-2xl text-stone-600 dark:text-stone-300 mb-12 max-w-2xl mx-auto leading-relaxed opacity-0 animate-[fadeIn_1.5s_ease-out_forwards_0.5s]">
-                A curated collection of the world's most evocative private retreats, hand-selected for the discerning modern traveler.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[fadeIn_1.5s_ease-out_forwards_0.8s]">
-                <a href="#destinations" class="bg-primary text-white px-12 py-5 rounded-full font-bold shadow-2xl hover:scale-105 transition-all text-sm uppercase tracking-widest">
-                    Explore The Collection
-                </a>
-                <button class="glass px-12 py-5 rounded-full font-bold border border-stone-200 dark:border-stone-700 hover:bg-white dark:hover:bg-stone-800 transition-all text-sm uppercase tracking-widest">
-                    Our Philosophy
-                </button>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-            <span class="material-symbols-outlined text-stone-400">expand_more</span>
-        </div>
-    </section>
-
-    <!-- Featured Destinations -->
-    <section id="destinations" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div class="reveal">
-                <h3 class="text-stone-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-4">Hand-Selected Destinations</h3>
-                <h2 class="font-display text-5xl font-bold">The Friday Collection</h2>
-            </div>
-            <p class="max-w-md text-stone-500 text-sm leading-relaxed reveal">
-                We traverse the globe to identify locations that offer not just luxury, but a soul-stirring connection to nature and culture.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <!-- Card 1 -->
-            <div class="group cursor-pointer reveal">
-                <div class="relative overflow-hidden rounded-[2.5rem] mb-8 aspect-[4/5] shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Bali"/>
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-                    <div class="absolute top-6 right-6 bg-white/95 backdrop-blur px-5 py-2.5 rounded-full text-[10px] font-black tracking-widest uppercase text-primary shadow-lg">
-                        From $1,200 / Night
-                    </div>
-                </div>
-                <h4 class="font-display text-3xl font-bold mb-3">Uluwatu, Bali</h4>
-                <p class="text-stone-500 text-sm mb-6 leading-relaxed">Private clifftop sanctuaries where the Indian Ocean meets architectural brilliance.</p>
-                <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all">
-                    View Retreat <span class="material-symbols-outlined text-xs">arrow_forward</span>
+        <div class="deals-scroll-container">
+            <div class="deal-card">
+                <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1000&auto=format&fit=crop" alt="Bali Pool">
+                <div class="card-content">
+                    <h3>Uluwatu, Bali</h3>
+                    <p class="price">From $1,200</p>
+                    <p class="desc">Private pool & cliffside views</p>
+                    <button class="btn-outline">View Details</button>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="group cursor-pointer reveal" style="transition-delay: 0.2s;">
-                <div class="relative overflow-hidden rounded-[2.5rem] mb-8 aspect-[4/5] shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Santorini"/>
-                    <div class="absolute top-6 right-6 bg-white/95 backdrop-blur px-5 py-2.5 rounded-full text-[10px] font-black tracking-widest uppercase text-primary shadow-lg">
-                        From $1,850 / Night
-                    </div>
-                </div>
-                <h4 class="font-display text-3xl font-bold mb-3">Oia, Santorini</h4>
-                <p class="text-stone-500 text-sm mb-6 leading-relaxed">Iconic cave suites carved into volcanic rock, offering the world's most evocative sunsets.</p>
-                <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all">
-                    View Retreat <span class="material-symbols-outlined text-xs">arrow_forward</span>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="group cursor-pointer reveal" style="transition-delay: 0.4s;">
-                <div class="relative overflow-hidden rounded-[2.5rem] mb-8 aspect-[4/5] shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Amalfi"/>
-                    <div class="absolute top-6 right-6 bg-white/95 backdrop-blur px-5 py-2.5 rounded-full text-[10px] font-black tracking-widest uppercase text-primary shadow-lg">
-                        From $1,450 / Night
-                    </div>
-                </div>
-                <h4 class="font-display text-3xl font-bold mb-3">Positano, Italy</h4>
-                <p class="text-stone-500 text-sm mb-6 leading-relaxed">Bespoke Mediterranean villas terraced into the cliffs of the legendary Amalfi Coast.</p>
-                <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all">
-                    View Retreat <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            <div class="deal-card">
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop" alt="Santorini">
+                <div class="card-content">
+                    <h3>Oia, Santorini</h3>
+                    <p class="price">From $1,500</p>
+                    <p class="desc">Caldera views & sunset dining</p>
+                    <button class="btn-outline">View Details</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy Section -->
-    <section id="philosophy" class="bg-stone-100 dark:bg-stone-900/40 py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
-            <div class="relative reveal">
-                <div class="absolute -top-12 -left-12 w-64 h-64 bg-accent/10 rounded-full blur-[100px]"></div>
-                <img 
-                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" 
-                    class="rounded-[4rem] shadow-2xl relative z-10 w-full"
-                    alt="Luxury Interior"
-                />
-                <div class="absolute -bottom-10 -right-10 glass p-10 rounded-[2rem] shadow-xl z-20 hidden md:block border border-stone-200 dark:border-stone-800">
-                    <p class="font-display text-2xl font-bold italic">"Excellence is not a <br/>goal, but our standard."</p>
-                    <p class="text-[10px] font-black uppercase tracking-widest mt-4 text-stone-400">— Marcus Friday, Founder</p>
+    <section class="section guest-stories">
+        <h2>Guest Stories</h2>
+        
+        <div class="story-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="story-text">The attention to detail was unmatched. Our Friday retreat to Bali was the most rejuvenating experience of our lives.</p>
+            <div class="user-profile">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah">
+                <div class="user-info">
+                    <h4>Sarah Jenkins</h4>
+                    <span>TRAVEL ENTHUSIAST</span>
                 </div>
             </div>
-            <div class="reveal">
-                <h3 class="text-stone-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-4">Our Commitment</h3>
-                <h2 class="font-display text-5xl font-bold mb-10 leading-tight">Crafting Life's <br/>Greatest Moments</h2>
-                
-                <div class="space-y-10">
-                    <div class="flex gap-8 group">
-                        <div class="size-16 rounded-2xl bg-white dark:bg-stone-800 flex items-center justify-center shadow-lg group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined text-2xl">verified_user</span>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-bold text-lg mb-2">Extreme Privacy</h4>
-                            <p class="text-stone-500 text-sm leading-relaxed">Each sanctuary is chosen for its absolute seclusion, ensuring your escape remains your own.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 group">
-                        <div class="size-16 rounded-2xl bg-white dark:bg-stone-800 flex items-center justify-center shadow-lg group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined text-2xl">concierge</span>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-bold text-lg mb-2">Intuitive Service</h4>
-                            <p class="text-stone-500 text-sm leading-relaxed">Our concierge artisans anticipate your needs before they arise, from arrival to departure.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 group">
-                        <div class="size-16 rounded-2xl bg-white dark:bg-stone-800 flex items-center justify-center shadow-lg group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined text-2xl">landscape</span>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-bold text-lg mb-2">Symbiotic Design</h4>
-                            <p class="text-stone-500 text-sm leading-relaxed">Architecture that honors its environment, blending global luxury with local heritage.</p>
-                        </div>
-                    </div>
+        </div>
+
+        <div class="story-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="story-text">A seamless luxury experience from booking to departure. Friday Retreats really knows how to deliver the "wow" factor.</p>
+            <div class="user-profile">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark">
+                <div class="user-info">
+                    <h4>Mark D'Amico</h4>
+                    <span>CORPORATE EXECUTIVE</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking Form -->
-    <section id="contact" class="py-32 px-6">
-        <div class="max-w-3xl mx-auto text-center reveal">
-            <h2 class="font-display text-5xl font-bold mb-6">Begin Your Journey</h2>
-            <p class="text-stone-500 mb-16 text-lg">Leave your details, and a Friday Retreats specialist will contact you within 24 hours to begin curating your next masterpiece.</p>
-            
-            <form class="space-y-6 bg-white dark:bg-stone-900/50 p-12 rounded-[3rem] shadow-2xl border border-stone-100 dark:border-stone-800" onsubmit="return false">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="text-left">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2 block ml-4">Full Name</label>
-                        <input type="text" placeholder="Your name" class="w-full bg-stone-50 dark:bg-stone-800 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 shadow-inner"/>
-                    </div>
-                    <div class="text-left">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2 block ml-4">Email Address</label>
-                        <input type="email" placeholder="example@email.com" class="w-full bg-stone-50 dark:bg-stone-800 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 shadow-inner"/>
+    <section class="section plan-stay">
+        <h2>Plan Your Stay</h2>
+        
+        <div class="booking-form">
+            <div class="form-group">
+                <label>WHERE TO?</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Search destination">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>CHECK IN</label>
+                    <div class="input-wrapper">
+                        <i class="far fa-calendar"></i>
+                        <input type="text" placeholder="Select date">
                     </div>
                 </div>
-                <div class="text-left">
-                    <label class="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2 block ml-4">Preferred Destination</label>
-                    <select class="w-full bg-stone-50 dark:bg-stone-800 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 shadow-inner appearance-none">
-                        <option>The Bali Collection</option>
-                        <option>Mediterranean Escapes</option>
-                        <option>Alpine Sanctuaries</option>
-                        <option>Private Island Charters</option>
+                <div class="form-group">
+                    <label>CHECK OUT</label>
+                    <div class="input-wrapper">
+                        <i class="far fa-calendar"></i>
+                        <input type="text" placeholder="Select date">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>GUESTS</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user-friends"></i>
+                    <select>
+                        <option>2 Adults, 0 Children</option>
+                        <option>1 Adult, 0 Children</option>
                     </select>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
                 </div>
-                <button class="w-full bg-primary text-white py-6 rounded-2xl font-bold shadow-xl hover:bg-stone-800 transition-all uppercase tracking-widest text-xs mt-4">
-                    Send Inquiry
-                </button>
-            </form>
+            </div>
+
+            <button class="btn-submit">Check Availability <i class="fas fa-arrow-right"></i></button>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-500 py-24 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
-            <div class="col-span-2 md:col-span-1">
-                <div class="flex items-center gap-2 text-white mb-6">
-                    <span class="material-symbols-outlined text-accent">diamond</span>
-                    <h1 class="font-display text-xl font-bold tracking-tight">FRIDAY RETREATS</h1>
-                </div>
-                <p class="text-xs leading-relaxed max-w-xs">Global curators of ultra-luxury private travel. Hand-selecting the world's most exceptional retreats since 2012.</p>
-            </div>
-            <div>
-                <h5 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Explore</h5>
-                <ul class="text-xs space-y-4">
-                    <li><a href="#" class="hover:text-accent transition-colors">The Portfolio</a></li>
-                    <li><a href="#" class="hover:text-accent transition-colors">Membership Perks</a></li>
-                    <li><a href="#" class="hover:text-accent transition-colors">Yachting</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Journal</h5>
-                <ul class="text-xs space-y-4">
-                    <li><a href="#" class="hover:text-accent transition-colors">Travel Stories</a></li>
-                    <li><a href="#" class="hover:text-accent transition-colors">Design Trends</a></li>
-                    <li><a href="#" class="hover:text-accent transition-colors">Founder's Note</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Legal</h5>
-                <ul class="text-xs space-y-4">
-                    <li><a href="#" class="hover:text-accent transition-colors">Privacy Charter</a></li>
-                    <li><a href="#" class="hover:text-accent transition-colors">Booking Terms</a></li>
-                    <li><a href="#" class="hover:text-accent transition-colors">Ethics & Sustainability</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-stone-800 text-center">
-            <p class="text-[10px] font-black uppercase tracking-widest">&copy; 2025 Friday Retreats Global Inc. Designed by Excellence.</p>
-        </div>
-    </footer>
-
-    <!-- Concierge Floating Chat -->
-    <div class="fixed bottom-10 right-10 z-[110]">
-        <button id="chatToggle" class="size-20 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group">
-            <span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">concierge</span>
-            <span class="absolute -top-1 -right-1 flex h-4 w-4">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-4 w-4 bg-accent"></span>
-            </span>
-        </button>
-        
-        <!-- Minimalist Chat Window -->
-        <div id="chatWindow" class="hidden absolute bottom-24 right-0 w-[380px] h-[550px] glass border border-stone-200 dark:border-stone-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 duration-200 origin-bottom-right">
-            <div class="p-6 bg-primary text-white flex justify-between items-center">
-                <div>
-                    <h5 class="text-xs font-black uppercase tracking-widest">Friday Concierge</h5>
-                    <p class="text-[10px] opacity-60">Elite Travel Assistance</p>
-                </div>
-                <button id="closeChat" class="material-symbols-outlined hover:rotate-90 transition-transform">close</button>
-            </div>
-            <div class="flex-1 overflow-y-auto p-8 space-y-6 no-scrollbar" id="chatHistory">
-                <div class="flex justify-start">
-                    <div class="max-w-[85%] p-5 rounded-[2rem] rounded-bl-none bg-stone-100 dark:bg-stone-800 text-sm leading-relaxed">
-                        Good afternoon. I am your Friday Retreats concierge. Where in the world shall we take you next?
-                    </div>
-                </div>
-            </div>
-            <div class="p-6 bg-white/50 dark:bg-black/20 flex gap-3 items-center">
-                <input id="chatInput" type="text" placeholder="Plan your escape..." class="flex-1 bg-white dark:bg-stone-800 border-none rounded-2xl px-6 py-4 text-sm focus:ring-1 focus:ring-primary shadow-inner"/>
-                <button id="sendMessage" class="size-12 bg-primary text-white rounded-2xl flex items-center justify-center hover:bg-stone-800 transition-colors">
-                    <span class="material-symbols-outlined text-sm">send</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts for simple interactivity -->
-    <script>
-        // Theme Toggle Logic
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
-
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            themeIcon.textContent = html.classList.contains('dark') ? 'light_mode' : 'dark_mode';
-        });
-
-        // Chat Widget Logic
-        const chatToggle = document.getElementById('chatToggle');
-        const chatWindow = document.getElementById('chatWindow');
-        const closeChat = document.getElementById('closeChat');
-        const chatInput = document.getElementById('chatInput');
-        const sendMessage = document.getElementById('sendMessage');
-        const chatHistory = document.getElementById('chatHistory');
-
-        chatToggle.addEventListener('click', () => chatWindow.classList.toggle('hidden'));
-        closeChat.addEventListener('click', () => chatWindow.classList.add('hidden'));
-
-        function appendMessage(role, text) {
-            const wrapper = document.createElement('div');
-            wrapper.className = `flex ${role === 'user' ? 'justify-end' : 'justify-start'}`;
-            const bubble = document.createElement('div');
-            bubble.className = `max-w-[85%] p-5 rounded-[2rem] text-sm leading-relaxed ${
-                role === 'user' 
-                ? 'bg-primary text-white rounded-br-none shadow-lg' 
-                : 'bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 rounded-bl-none'
-            }`;
-            bubble.textContent = text;
-            wrapper.appendChild(bubble);
-            chatHistory.appendChild(wrapper);
-            chatHistory.scrollTop = chatHistory.scrollHeight;
-        }
-
-        sendMessage.addEventListener('click', () => {
-            const val = chatInput.value.trim();
-            if(!val) return;
-            appendMessage('user', val);
-            chatInput.value = '';
-            
-            // Mock AI Response
-            setTimeout(() => {
-                appendMessage('ai', "I'm looking into available private villas in " + (val.includes('Bali') ? 'Bali' : 'our premium portfolio') + " for you right now. One of our artisans will reach out shortly.");
-            }, 800);
-        });
-
-        // Scroll reveal logic
-        const reveals = document.querySelectorAll('.reveal');
-        function checkReveal() {
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const revealTop = el.getBoundingClientRect().top;
-                const revealPoint = 150;
-                if (revealTop < windowHeight - revealPoint) {
-                    el.classList.add('active');
-                }
-            });
-        }
-        window.addEventListener('scroll', checkReveal);
-        window.addEventListener('load', checkReveal);
-    </script>
-
-    <!-- Essential animations -->
-    <style>
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
-
-<script type="module" src="/index.tsx"></script>
 </body>
 </html>
